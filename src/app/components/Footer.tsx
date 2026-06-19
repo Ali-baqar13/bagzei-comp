@@ -264,6 +264,7 @@ const Footer = () => {
                     </div>
 
                     {/* Bagzei Accepts */}
+                    
 
                     <div className="flex flex-col gap-[10px] mt-[30px]">
                       <p className="font-footer-copyright-14 font-Akkurat text-primary-2">
