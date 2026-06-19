@@ -38,7 +38,10 @@ const data = [
       { label: "Affiliate Program", href: "#" },
     ],
   },
-  {
+  
+];
+
+const bagzeiAcceptData = {
     type: "newsletter",
     title: "Newsletter",
 
@@ -108,8 +111,7 @@ const data = [
         alt: "american express icon",
       },
     ],
-  },
-];
+  }
 
 const copyRightData = {
   text: "Copyright © 2026 BAGZEI. All Rights Reserved.",
@@ -133,15 +135,17 @@ const Footer = () => {
         <ScreenContainer>
           <div className="lg:px-[40px] md:px-[20px] px-[16px] md:py-[40px] py-[16px] bg-primary-1">
             {/* Accordion work start */}
-            <div className={`w-full  grid md:grid-cols-3 grid-cols-1 `}>
+
+            <div className={`w-full  grid lg:grid-cols-3 grid-cols-1 `}>
               {/* accord 1 is here*/}
-              {data?.map((item, index) =>
-                item.type === "links" ? (
+              {data?.map(
+                (item, index) => (
+                  // item.type === "links" ? (
                   <div>
-                    <div className={`md:hidden block md:my-[20px] my-[16px]`}>
+                    <div className={`lg:hidden block lg:my-[20px] my-[16px]`}>
                       <BorderLine />
                     </div>
-                    <div className="flex flex-col gap-[0px] md:gap-[16px]">
+                    <div className="flex flex-col gap-[0px] lg:gap-[16px]">
                       <button
                         onClick={() =>
                           setOpenAccordion(
@@ -163,7 +167,7 @@ const Footer = () => {
                           alt="view"
                           width={20}
                           height={20}
-                          className="block md:hidden transition-all duration-300 "
+                          className="block lg:hidden transition-all duration-300 "
                         />
 
                         {/* accord icon will definetely add here */}
@@ -172,8 +176,8 @@ const Footer = () => {
                       <ul
                         className={` flex flex-col overflow-hidden transition-all duration-300 ${
                           openAccordion === index
-                            ? "h-auto  md:mt-[0px] mt-[20px]"
-                            : "max-h-0  md:max-h-none"
+                            ? "h-auto  lg:mt-[0px] mt-[20px]"
+                            : "max-h-0  lg:max-h-none"
                         }`}
                       >
                         {item?.links?.map((link, index) => (
@@ -189,95 +193,97 @@ const Footer = () => {
                       </ul>
                     </div>
                   </div>
-                ) : (
-                  <>
-                    <div className={`md:hidden block md:my-[20px] my-[16px]`}>
-                      <BorderLine />
-                    </div>
-                    <div className="flex flex-col gap-[0px] md:gap-[16px]">
-                      <button
-                        onClick={() =>
-                          setOpenAccordion(
-                            openAccordion === index ? null : index,
-                          )
-                        }
-                        className="flex items-center justify-between"
-                      >
-                        <p className="font-footer-title-20 font-ChronicleDisplay text-primary-2">
-                          {item?.title}
-                        </p>
-                        <Image
-                          src={
-                            openAccordion === index
-                              ? "/assets/icons/minus.svg"
-                              : "/assets/icons/plus.svg"
-                          }
-                          alt="view"
-                          width={20}
-                          height={20}
-                          className="block md:hidden transition-all duration-300 "
-                        />
-                      </button>
-                      <div
-                        className={` flex flex-col overflow-hidden transition-all duration-300 ${
-                          openAccordion === index
-                            ? "h-auto  md:mt-[0px] mt-[20px]"
-                            : "max-h-0 md:max-h-none"
-                        }`}
-                      >
-                        <div className="flex flex-col">
-                          <p className="font-footer-link-14 font-Akkurat text-primary-2">
-                            {item?.description}
-                          </p>
-                          <div className="mt-[24px]">
-                            <Subscribe />
-                          </div>
-                          <div className="mt-[10px]">
-                            <BorderLine />
-                          </div>
-                          {/* social media icons */}
+                ),
+                // ) : (
 
-                          <div className="flex gap-[20px] items-center mt-[24px]">
-                            {item?.socialIcons?.map((icon, index) => (
-                              <Link
-                                key={index}
-                                href="#"
-                                className="text-primary-2 hover:underline"
-                              >
-                                <Image
-                                  alt={icon.alt}
-                                  src={icon.src}
-                                  width={16}
-                                  height={16}
-                                />
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
+                // ),
+              )}
 
-                        {/* Bagzei Accepts */}
+              <>
+                <div className={`lg:hidden block md:my-[20px] my-[16px]`}>
+                  <BorderLine />
+                </div>
+                <div className="flex flex-col gap-[0px] lg:gap-[16px]">
+                  <button
+                    // onClick={() =>
+                    //   setOpenAccordion(openAccordion === index ? null : index)
+                    // }
+                    className="flex items-center justify-between"
+                  >
+                    <p className="font-footer-title-20 font-ChronicleDisplay text-primary-2">
+                      {bagzeiAcceptData?.title}
+                    </p>
+                    {/* <Image
+                      src={
+                        openAccordion === index
+                          ? "/assets/icons/minus.svg"
+                          : "/assets/icons/plus.svg"
+                      }
+                      alt="view"
+                      width={20}
+                      height={20}
+                      className="block lg:hidden transition-all duration-300 "
+                    /> */}
+                  </button>
+                  <div
+                    className={` flex flex-col overflow-hidden 
+                       
+                         h-auto  lg:mt-[0px] mt-[20px]
+                       
+                    
+                      `}
+                  >
+                    <div className="flex flex-col">
+                      <p className="font-footer-link-14 font-Akkurat text-primary-2">
+                        {bagzeiAcceptData?.description}
+                      </p>
+                      <div className="mt-[24px]">
+                        <Subscribe />
+                      </div>
+                      <div className="mt-[10px]">
+                        <BorderLine />
+                      </div>
+                      {/* social media icons */}
 
-                        <div className="flex flex-col gap-[10px] mt-[30px]">
-                          <p className="font-footer-copyright-14 font-Akkurat text-primary-2">
-                            {item?.bagzieAccepts}
-                          </p>
-                          <div className="flex  xl:flex-nowrap flex-wrap  md:gap-[19px] gap-[16px]">
-                            {item?.paymentData?.map((icon, index) => (
-                              <Image
-                                key={index}
-                                alt={icon.alt}
-                                src={icon.src}
-                                width={40}
-                                height={24}
-                              />
-                            ))}
-                          </div>
-                        </div>
+                      <div className="flex gap-[20px] items-center mt-[24px]">
+                        {bagzeiAcceptData?.socialIcons?.map((icon, index) => (
+                          <Link
+                            key={index}
+                            href="#"
+                            className="text-primary-2 hover:underline"
+                          >
+                            <Image
+                              alt={icon.alt}
+                              src={icon.src}
+                              width={16}
+                              height={16}
+                            />
+                          </Link>
+                        ))}
                       </div>
                     </div>
-                  </>
-                ),
-              )}
+
+                    {/* Bagzei Accepts */}
+
+                    <div className="flex flex-col gap-[10px] mt-[30px]">
+                      <p className="font-footer-copyright-14 font-Akkurat text-primary-2">
+                        {bagzeiAcceptData?.bagzieAccepts}
+                      </p>
+                      <div className="flex  xl:flex-nowrap flex-wrap  md:gap-[19px] gap-[16px]">
+                        {bagzeiAcceptData?.paymentData?.map((icon, index) => (
+                          <Image
+                            key={index}
+                            alt={icon.alt}
+                            src={icon.src}
+                            width={40}
+                            height={24}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
             </div>
 
             {/* Acoordion work comp */}
