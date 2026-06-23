@@ -129,7 +129,7 @@ const page = () => {
 
       <div
         ref={heightRef}
-        className={`relative top-auto self-start`}
+        className={`sticky top-auto self-start`}
         style={{
           top: `${topPosition}px`,
         }}
