@@ -126,7 +126,7 @@ const Footer = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
   
   return (
-    <div className="relative justify-center h-auto items-center overflow-y-scroll">
+    <div className="relative justify-center h-auto items-center">
       <div className="w-full top-0 bottom-0 absolute left-0 right-0  z-[1]">
         <Image src="/assets/images/footer-bg.png" alt="Footer Image" fill />
       </div>

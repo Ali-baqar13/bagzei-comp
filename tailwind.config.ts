@@ -18,10 +18,11 @@ const config: Config = {
           1: "var(--color-white)",
           2: "var(--color-black)",
           3: "var(--color-light-grey)",
-          4: "var(--color-dark-grey)"
+          4: "var(--color-dark-grey)",
+          5: "var(--color-text-gray)",
         },
         secondary: {
-          1:"var(--color-border-grey)",
+          1: "var(--color-border-grey)",
         },
         background: "var(--background)",
         foreground: "var(--foreground)",
