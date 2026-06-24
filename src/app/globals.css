@@ -10,6 +10,14 @@
   --color-light-grey: #F4F4F4;
   --color-dark-grey: #C8C8C8;
   --color-border-grey: #E5E5E5;
+  --color-mid-grey: #8C8C8C;
+  --color-medium-grey: #979797;
+  --color-extra-light-grey: #E0E0E0;
+  /* font-sizes */
+  --font-product-16: 16px;
+  --line-height-product-16: 26px;
+
+  --font-top-nav-12: 12px;
   --color-text-gray: #979797;
   /* font-sizes */
   --font-top-nav-12: 12px;
@@ -46,11 +54,53 @@
   --font-footer-copyright-14: 14px;
   --line-height-footer-copyright-14: 28px;
 
-  /* added new font sizes */
 
   --font-title-24: 24px;
   --line-height-title-24: 32px
 }
+
+/* New Classes Start */
+
+.font-product-16 {
+  font-size: var(--font-product-16);
+  line-height: var(--line-height-product-16);
+}
+.text-extra-light-grey {
+  color: var(--color-extra-light-grey);
+}
+
+.bg-extra-light-grey {
+  background-color: var(--color-extra-light-grey);
+}
+
+.border-extra-light-grey {
+  border-color: var(--color-extra-light-grey);
+}
+
+.text-mid-grey {
+  color: var(--color-medium-grey);
+}
+
+.bg-mid-grey {
+  background-color: var(--color-medium-grey);
+}
+
+.border-mid-grey {
+  border-color: var(--color-medium-grey);
+}
+
+.text-medium-grey {
+  color: var(--color-medium-grey);
+}
+
+.bg-medium-grey {
+  background-color: var(--color-medium-grey);
+}
+
+.border-medium-grey {
+  border-color: var(--color-medium-grey);
+}
+/* New Classes End */
 
 @media (prefers-color-scheme: dark) {
   :root {

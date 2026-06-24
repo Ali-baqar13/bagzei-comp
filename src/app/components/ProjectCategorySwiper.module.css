@@ -1,0 +1,4 @@
+.customSwiper :global(.swiper-wrapper) {
+      width: 99.05% !important;
+     
+}

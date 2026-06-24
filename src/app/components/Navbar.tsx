@@ -7,7 +7,7 @@ const Navbar = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false)
     return (
         <>
-            <header className='w-full lg:min-h-[120px] md:min-h-[110px] min-h-[80px] h-auto sticky top-0 bg-primary-1 z-20'>
+            <header className='w-full lg:min-h-[120px] md:min-h-[110px] min-h-[80px] h-auto sticky top-0 bg-primary-1 z-20 border-b border-[var("-extra-light-grey")]'>
                 <p className=' text-center bg-primary-3 pt-[16px] pb-[15px] font-Akkurat font-top-nav-12 relative w-full overflow-hidden'>
                     10% Off when you subscribe to our emails. T&Cs apply
                     <button className='md:w-[24px] md:h-[24px] w-[20px] h-[20px] absolute lg:right-[40px] md:right-[24px] right-[16px] top-[9px]'>
@@ -15,7 +15,7 @@ const Navbar = () => {
                     </button>
                 </p>
                 <nav className='max-w-[1440px]  w-full mx-auto lg:px-[80px] md:px-[24px] px-[16px] flex flex-row justify-between items-center lg:py-[26px] md:py-[25px] py-[15px]'>
-                    <div className='flex flex-row lg:gap-[20px] gap-[16px] font-Akkurat font-Akkurat font-normal font-menu-nav-14'>
+                    <div className='flex flex-row lg:gap-[20px] gap-[16px] font-Akkurat font-normal font-menu-nav-14'>
                         <ul className='lg:flex flex-row gap-[20px] hidden'>
                             <li><Link href='/'>New In</Link></li>
                             <li><Link href='/'>Collections</Link></li>
